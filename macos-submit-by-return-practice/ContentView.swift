@@ -8,10 +8,34 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        Text("Hello, World!")
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-    }
+  
+  @State private var account: String = ""
+
+  @State private var password: String = ""
+  
+  var body: some View {
+    VStack(spacing: 20) {
+      TextField("Username", text: $account, onCommit: {
+        debugPrint("Username is entered")
+      }).textFieldStyle(RoundedBorderTextFieldStyle())
+        .frame(width: 265, height: 20, alignment: .center)
+      
+      SecureField(
+        "Password",
+        text: $password,
+        onCommit: {
+          debugPrint("Password is entered")
+        }
+      ).textFieldStyle(RoundedBorderTextFieldStyle())
+        .frame(width: 265, height: 20, alignment: .center)
+      
+      Button(action: {
+        debugPrint("Submit")
+      }) {
+        Text("Signin")
+      }
+    }.padding(.all, 16)
+  }
 }
 
 
