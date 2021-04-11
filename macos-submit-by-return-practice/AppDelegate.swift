@@ -12,9 +12,21 @@ import SwiftUI
 class AppDelegate: NSObject, NSApplicationDelegate {
 
   var window: NSWindow!
-
+  var otherWindow: NSWindow!
 
   func applicationDidFinishLaunching(_ aNotification: Notification) {
+    
+    otherWindow = NSWindow(
+      contentRect: NSRect(x: 0, y: 0, width: 480, height: 300),
+      styleMask: [.titled, .closable, .miniaturizable, .resizable, .fullSizeContentView],
+      backing: .buffered, defer: false
+    )
+    otherWindow.isReleasedWhenClosed = false
+    otherWindow.center()
+    otherWindow.setFrameAutosaveName("Other Window")
+    otherWindow.contentView = NSHostingView(rootView: OtherWindowView())
+    otherWindow.makeKeyAndOrderFront(nil)
+    
     // Create the SwiftUI view that provides the window contents.
     let contentView = ContentView()
 

@@ -14,27 +14,40 @@ struct ContentView: View {
   @State private var password: String = ""
   
   var body: some View {
-    VStack(spacing: 20) {
-      TextField("Username", text: $account, onCommit: {
-        debugPrint("Username is entered")
-      }).textFieldStyle(RoundedBorderTextFieldStyle())
-        .frame(width: 265, height: 20, alignment: .center)
-      
-      SecureField(
-        "Password",
-        text: $password,
-        onCommit: {
-          debugPrint("Password is entered")
+    NavigationView {
+      Form {
+        Section {
+          VStack(spacing: 20) {
+            
+            TextField("Username", text: $account) { isEditing in
+              debugPrint("isEditing: \(isEditing)")
+            } onCommit: {
+              debugPrint("Username is entered")
+            }
+            .textFieldStyle(RoundedBorderTextFieldStyle())
+            .frame(width: 265, height: 20, alignment: .center)
+            
+            
+            SecureField(
+              "Password",
+              text: $password
+            ) {
+              debugPrint("Password is entered")
+            }
+            .textFieldStyle(RoundedBorderTextFieldStyle())
+            .frame(width: 265, height: 20, alignment: .center)
+            
+            Button(action: {
+              debugPrint("Submit")
+            }) {
+              Text("Signin")
+            }
+            .keyboardShortcut(.defaultAction)
+          }
+          .padding(.all, 16)
         }
-      ).textFieldStyle(RoundedBorderTextFieldStyle())
-        .frame(width: 265, height: 20, alignment: .center)
-      
-      Button(action: {
-        debugPrint("Submit")
-      }) {
-        Text("Signin")
       }
-    }.padding(.all, 16)
+    }
   }
 }
 

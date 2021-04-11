@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B01DE172622D58A00132379 /* OtherWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B01DE162622D58A00132379 /* OtherWindowView.swift */; };
 		9B16670A2621F4750032448F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1667092621F4750032448F /* AppDelegate.swift */; };
 		9B16670C2621F4750032448F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B16670B2621F4750032448F /* ContentView.swift */; };
 		9B16670E2621F4760032448F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B16670D2621F4760032448F /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9B01DE162622D58A00132379 /* OtherWindowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherWindowView.swift; sourceTree = "<group>"; };
 		9B1667062621F4750032448F /* macos-submit-by-return-practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "macos-submit-by-return-practice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B1667092621F4750032448F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B16670B2621F4750032448F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 			children = (
 				9B1667092621F4750032448F /* AppDelegate.swift */,
 				9B16670B2621F4750032448F /* ContentView.swift */,
+				9B01DE162622D58A00132379 /* OtherWindowView.swift */,
 				9B16670D2621F4760032448F /* Assets.xcassets */,
 				9B1667122621F4760032448F /* Main.storyboard */,
 				9B1667152621F4760032448F /* Info.plist */,
@@ -265,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B01DE172622D58A00132379 /* OtherWindowView.swift in Sources */,
 				9B16670C2621F4750032448F /* ContentView.swift in Sources */,
 				9B16670A2621F4750032448F /* AppDelegate.swift in Sources */,
 			);
@@ -443,7 +447,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.soudegesu.macos-submit-by-return-practice";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -465,7 +469,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.soudegesu.macos-submit-by-return-practice";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
